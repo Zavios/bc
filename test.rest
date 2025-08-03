@@ -1,0 +1,24 @@
+###
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "cashbookName":"name",
+    "icon":12,
+    "creditCategoryMap":{"DAWda":123,"kjwad":744}
+}
+
+
+###
+POST http://localhost:3000/user/createuser
+Content-Type: application/json
+
+{
+    "userName": "Abhishek",
+    "password": "password",
+    "email": "s@gmail.com",
+    "isEmailVerified": true
+}
+
+### 
+GET http://localhost:3000/user/getuser/688e558071a244f39f907f2c
