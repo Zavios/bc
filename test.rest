@@ -22,3 +22,17 @@ Content-Type: application/json
 
 ### 
 GET http://localhost:3000/user/getuser/688e558071a244f39f907f2c
+
+
+###
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "userName": "mrz",
+    "email": "szav@gmail.com",
+    "password": "hashedPassword"
+}
+
+###
+GET http://localhost:3000/auth/getall

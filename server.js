@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cashbookModel = require('./models/cashbookModel')
 const userRouter = require('./routes/userRoute')
+const authRouter = require('./routes/authentication')
 
 mongoose.connect(process.env.DATABASE_URI)
     .then(()=>{ console.log('Connected to Database');} )
@@ -15,6 +16,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/user',userRouter);
+app.use('/auth',authRouter);
 
 app.get('/', async (req,res) => {
     res.end('dwa')
@@ -32,6 +34,7 @@ app.post('/', async (req,res,next) => {
         res.status(500).json({message: error.message})
     }
 })
+
 
 app.listen(process.env.PORT, () => {
     console.log('Brokecheck app is running');

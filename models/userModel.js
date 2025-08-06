@@ -1,18 +1,25 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
+    // userAccessToken: {
+    //     type: String,
+    //     required: true
+    // },
     userName: {
         type: String,
         required: true,
+        trim: true
     },
     password: {
         type: String,
-        require: true
+        required: true,
+        trim: true
     },
     email: {
         type: String,
         required: true,
         unique: true,
+        trim: true
     },
     isEmailVerified: {
         type: Boolean,

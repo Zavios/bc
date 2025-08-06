@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const cashbookSchema = new mongoose.Schema({
-    // userId:{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'users',
-    //     required:true
-    // },
+    userId:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users',
+        required:true
+    },
     cashbookName: {
         type: String,
         required: true, 

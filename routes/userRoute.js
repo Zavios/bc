@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userModel = require('../models/userModel')
+// import { getRecord } from '../utility_functions/userUtilityFuncs'
 
 router.get('/',async (req, res, next) => {
     try {
